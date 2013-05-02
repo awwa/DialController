@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DialController">
+
+        <!-- The text for UI. -->
+        <attr name="textUp" format="string" />
+        <attr name="textDown" format="string" />
+        <attr name="textLeft" format="string" />
+        <attr name="textRight" format="string" />
+        <attr name="textEnter" format="string" />
+        <attr name="foreColor" format="color" />
+        <attr name="foreSize" format="dimension" />
+        <attr name="backgroundOuterRing" format="reference|color" />
+        <attr name="backgroundInnerRing" format="reference|color" />
+        <attr name="backgroundMarker" format="reference|color" />
+        <attr name="enableVibrate" format="boolean" />
+    </declare-styleable>
+
+</resources>
