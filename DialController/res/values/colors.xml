@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Pressed color -->
     <color name="color_pressed">#8033b5e5</color>
 
     <!-- DialEditView -->
-    <!-- 内リング背景色1：通常 -->
+    <!-- Default color : Inner ring 1 -->
     <color name="color_bg_inner_ring_normal_start">#FFECECEC</color>
-    <!-- 内リング背景色2：通常 -->
+    <!-- Default color : Inner ring 2 -->
     <color name="color_bg_inner_ring_normal_center">#FFBEBEBE</color>
-    <!-- 内リング背景色3：通常 -->
+    <!-- Default color : Inner ring 3 -->
     <color name="color_bg_inner_ring_normal_end">#FFECECEC</color>
-    <!-- 内リング背景色4：通常 -->
+    <!-- Default color : Inner ring 4 -->
     <color name="color_bg_inner_ring_normal_stroke">#FFD5D5D5</color>
-    <!-- 内リング背景色1：Pressed -->
-    <color name="color_bg_inner_ring_pressed_start">@color/color_pressed</color>
-    <!-- 内リング背景色2：Pressed -->
-    <color name="color_bg_inner_ring_pressed_center">@color/color_pressed</color>
-    <!-- 内リング背景色3：Pressed -->
-    <color name="color_bg_inner_ring_pressed_end">@color/color_pressed</color>
-    <!-- 内リング背景色4：Pressed -->
-    <color name="color_bg_inner_ring_pressed_stroke">@color/color_pressed</color>
-    <!-- 外リング背景色1：通常 -->
+
+    <!-- Default color : Outer ring 1 -->
     <color name="color_bg_outer_ring_normal_start">#FFFFFFFF</color>
-    <!-- 外リング背景色2：通常 -->
+    <!-- Default color : Outer ring 2 -->
     <color name="color_bg_outer_ring_normal_center">#FF969696</color>
-    <!-- 外リング背景色3：通常 -->
+    <!-- Default color : Outer ring 3 -->
     <color name="color_bg_outer_ring_normal_end">#FFD0D0D0</color>
-    <!-- 外リング背景色：Pressed -->
-    <color name="color_bg_outer_ring_pressed">@color/color_pressed</color>
+
+    <!-- Default color : Marker 1 -->
     <color name="color_bg_marker_start">#FF646464</color>
+    <!-- Default color : Marker 2 -->
     <color name="color_bg_marker_center">#FF969696</color>
+    <!-- Default color : Marker 3 -->
     <color name="color_bg_marker_end">#FFFFFFFF</color>
 
 </resources>

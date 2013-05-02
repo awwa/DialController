@@ -2,8 +2,6 @@
 <resources>
 
     <declare-styleable name="DialController">
-
-        <!-- The text for UI. -->
         <attr name="textUp" format="string" />
         <attr name="textDown" format="string" />
         <attr name="textLeft" format="string" />

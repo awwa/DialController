@@ -80,14 +80,14 @@ public class DialController extends View implements OnTouchListener {
     /** Paint : text **/
     private Paint mPText = new Paint();
     /** Paint : background of outer ring pressed **/
-    private Paint mPBgOuterRingPressed = new Paint();
+    private Paint mPBgPressed = new Paint();
     /** Inner ring press started **/
     private boolean mInnerRingPressStarted = false;
     /** Outer ring press started **/
     private Operate mKeyCrossPressStarted = Operate.NONE;
     /** Frigidity move count for detect click on outer ring **/
     private int mFrigidityMoveCount = 0;
-    /** Operateion listener **/
+    /** Operation listener **/
     private OnOperationListener mOnOperationListener = null;
     /** Initial clicked coordinate on outer ring for calculate rotate **/
     private PointF mPointStart;
@@ -168,9 +168,9 @@ public class DialController extends View implements OnTouchListener {
         mPText.setColor(mTextColor);
         mPText.setTextSize(mTextSize);
         mPText.setAntiAlias(true);
-        mPBgOuterRingPressed.setColor(self.getResources().getColor(
-                R.color.color_bg_outer_ring_pressed));
-        mPBgOuterRingPressed.setAntiAlias(true);
+        mPBgPressed.setColor(self.getResources()
+                .getColor(R.color.color_pressed));
+        mPBgPressed.setAntiAlias(true);
         this.setOnTouchListener(this);
     }
 
@@ -220,13 +220,13 @@ public class DialController extends View implements OnTouchListener {
         RectF dstF = new RectF(mCx - mRadiusOuterRing, mCy - mRadiusOuterRing,
                 mCx + mRadiusOuterRing, mCy + mRadiusOuterRing);
         if (mKeyCrossPressStarted == Operate.UP)
-            c.drawArc(dstF, 225.0f, 90.0f, true, mPBgOuterRingPressed);
+            c.drawArc(dstF, 225.0f, 90.0f, true, mPBgPressed);
         if (mKeyCrossPressStarted == Operate.DOWN)
-            c.drawArc(dstF, 45.0f, 90.0f, true, mPBgOuterRingPressed);
+            c.drawArc(dstF, 45.0f, 90.0f, true, mPBgPressed);
         if (mKeyCrossPressStarted == Operate.LEFT)
-            c.drawArc(dstF, 135.0f, 90.0f, true, mPBgOuterRingPressed);
+            c.drawArc(dstF, 135.0f, 90.0f, true, mPBgPressed);
         if (mKeyCrossPressStarted == Operate.RIGHT)
-            c.drawArc(dstF, 315.0f, 90.0f, true, mPBgOuterRingPressed);
+            c.drawArc(dstF, 315.0f, 90.0f, true, mPBgPressed);
     }
 
     /**
@@ -242,7 +242,7 @@ public class DialController extends View implements OnTouchListener {
         mBgInnerRing.draw(c);
         // Draw pressed state
         if (mInnerRingPressStarted) {
-            c.drawCircle(mCx, mCy, mRadiusInnerRing, mPBgOuterRingPressed);
+            c.drawCircle(mCx, mCy, mRadiusInnerRing, mPBgPressed);
         }
     }
 
@@ -563,38 +563,66 @@ public class DialController extends View implements OnTouchListener {
         mOnOperationListener = l;
     }
 
+    /**
+     * Raise vibrate. Need permission 'android.permission.VIBRATE'
+     */
     private void vibrate() {
         if (mVib != null)
             mVib.vibrate(50);
     }
 
+    /**
+     * Change text 'Up'
+     * 
+     * @param text
+     */
     public void setTextUp(String text) {
         mTextUp = text;
         invalidate();
     }
 
+    /**
+     * Change text 'Down'
+     * 
+     * @param text
+     */
     public void setTextDown(String text) {
         mTextDown = text;
         invalidate();
     }
 
+    /**
+     * Change text 'Left'
+     * 
+     * @param text
+     */
     public void setTextLeft(String text) {
         mTextLeft = text;
         invalidate();
     }
 
+    /**
+     * Change text 'Right'
+     * 
+     * @param text
+     */
     public void setTextRight(String text) {
         mTextRight = text;
         invalidate();
     }
 
+    /**
+     * Change text 'Enter'
+     * 
+     * @param text
+     */
     public void setTextEnter(String text) {
         mTextEnter = text;
         invalidate();
     }
 
     /**
-     * enable vibrator
+     * Enable vibrator
      * 
      * @param enableVibrate
      */
@@ -611,32 +639,62 @@ public class DialController extends View implements OnTouchListener {
         }
     }
 
+    /**
+     * Get enable vibrator
+     * 
+     * @return
+     */
     public boolean getEnableVibrate() {
         return mEnableVibrate;
     }
 
+    /**
+     * Change text size
+     * 
+     * @param value
+     */
     public void setTextSize(float value) {
         mTextSize = value;
         mPText.setTextSize(mTextSize);
         invalidate();
     }
 
+    /**
+     * Change text color
+     * 
+     * @param value
+     */
     public void setTextColor(int value) {
         mTextColor = value;
         mPText.setColor(mTextColor);
         invalidate();
     }
 
+    /**
+     * Change background drawable of outer ring
+     * 
+     * @param value
+     */
     public void setBgOuterRing(Drawable value) {
         mBgOuterRing = value;
         invalidate();
     }
 
+    /**
+     * Change background drawable of inner ring
+     * 
+     * @param value
+     */
     public void setBgInnerRing(Drawable value) {
         mBgInnerRing = value;
         invalidate();
     }
 
+    /**
+     * Change background drawable of marker
+     * 
+     * @param value
+     */
     public void setBgMarker(Drawable value) {
         mBgMarker = value;
         invalidate();
