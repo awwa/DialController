@@ -1,6 +1,7 @@
 DialController
 ==============
-くるくる回したり、上下左右中央をクリックしたりすることで操作するコントローラViewです。<br>
-ライブラリ本体はDialControllerプロジェクトの方です。<br>
-使い方はDialControllerSampleを見てください。<br>
+This is custom controller view for Android.<br>
+Rotate, click up, down, left, right and center.<br>
+DialController project is library project.<br>
+Please see DialControllerSample for detail.<br>
 
