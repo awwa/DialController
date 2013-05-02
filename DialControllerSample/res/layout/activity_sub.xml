@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.awwa.sample.dialcontrollersample"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SubActivity" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <com.awwa.widget.DialController
+        android:id="@+id/controller"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:foreColor="@color/new_text_color"
+        app:foreSize="@dimen/new_text_size"
+        app:textDown="down"
+        app:textEnter="select"
+        app:textLeft="left"
+        app:textRight="right"
+        app:backgroundOuterRing="@drawable/bg_outer_ring"
+        app:backgroundInnerRing="@drawable/bg_inner_ring"
+        app:textUp="up" />
+</LinearLayout>

@@ -1,0 +1,35 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="dialControllerStyle">@style/DialController</item>
+    </style>
+
+    <!-- DialEditView -->
+    <style name="DialController">
+        <item name="textUp">+1</item>
+        <item name="textDown">-1</item>
+        <item name="textLeft">-10</item>
+        <item name="textRight">+10</item>
+        <item name="textEnter">@android:string/ok</item>
+        <item name="foreColor">@android:color/primary_text_light</item>
+        <item name="foreSize">18sp</item>
+        <item name="backgroundInnerRing">@drawable/bg_inner_ring</item>
+        <item name="backgroundOuterRing">@drawable/bg_outer_ring</item>
+        <item name="backgroundMarker">@drawable/bg_marker</item>
+        <item name="enableVibrate">true</item>
+    </style>
+
+</resources>

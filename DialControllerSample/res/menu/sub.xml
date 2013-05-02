@@ -1,0 +1,48 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/change_text_up"
+        android:showAsAction="never"
+        android:title="change text up"/>
+    <item
+        android:id="@+id/change_text_down"
+        android:showAsAction="never"
+        android:title="change text down"/>
+    <item
+        android:id="@+id/change_text_left"
+        android:showAsAction="never"
+        android:title="change text left"/>
+    <item
+        android:id="@+id/change_text_right"
+        android:showAsAction="never"
+        android:title="change text right"/>
+    <item
+        android:id="@+id/change_text_enter"
+        android:showAsAction="never"
+        android:title="change text enter"/>
+    <item
+        android:id="@+id/change_text_size"
+        android:showAsAction="never"
+        android:title="change text size"/>
+    <item
+        android:id="@+id/change_text_color"
+        android:showAsAction="never"
+        android:title="change text color"/>
+    <item
+        android:id="@+id/toggle_vibrate"
+        android:showAsAction="never"
+        android:title="toggle vibrate"/>
+    <item
+        android:id="@+id/change_bg_outer_ring"
+        android:showAsAction="never"
+        android:title="change bg outer ring"/>
+    <item
+        android:id="@+id/change_bg_inner_ring"
+        android:showAsAction="never"
+        android:title="change bg inner ring"/>
+    <item
+        android:id="@+id/change_bg_marker"
+        android:showAsAction="never"
+        android:title="change bg marker"/>
+
+</menu>
